@@ -1,5 +1,5 @@
 set :stage, :production
-set :branch, "master"
+ask :branch, "master"
 
 server 'ubuntu@3.124.9.114', user: 'ubuntu', roles: %w{web app db}, my_property: :my_value
 
