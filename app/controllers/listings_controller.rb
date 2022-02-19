@@ -148,6 +148,7 @@ class ListingsController < ApplicationController
 
       if @listing.save
         @listing.update shipping_price_cents: 10000
+        @listing.update listing_shape_id: 1 unless @listing.listing_shape_id == 1
         @listing.upsert_field_values!(params.to_unsafe_hash[:custom_fields])
         @listing.reorder_listing_images(params, @current_user.id)
         notify_about_new_listing
