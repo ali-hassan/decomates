@@ -147,6 +147,7 @@ class ListingsController < ApplicationController
       service.create_state(@listing)
 
       if @listing.save
+        @listing.update shipping_price_cents: 10000
         @listing.upsert_field_values!(params.to_unsafe_hash[:custom_fields])
         @listing.reorder_listing_images(params, @current_user.id)
         notify_about_new_listing
