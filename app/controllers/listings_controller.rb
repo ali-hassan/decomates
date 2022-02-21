@@ -146,6 +146,7 @@ class ListingsController < ApplicationController
       @listing.author = new_listing_author
       service.create_state(@listing)
 
+      ### shipping_price_cents is in cents
       if @listing.save
         @listing.update shipping_price_cents: 10000, require_shipping_address: true
         @listing.update listing_shape_id: 1 unless @listing.listing_shape_id == 1
