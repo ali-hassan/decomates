@@ -190,6 +190,7 @@ gem "cocoon"
 gem "fast-polylines"
 gem "codemirror-rails"
 gem 'rb-inotify', '~> 0.10'
+gem "geocoder"
 
 group :deployment do
   gem "capistrano", "=3.11"
