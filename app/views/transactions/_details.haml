@@ -12,3 +12,13 @@
 
       %div{:id => "transaction_status"}
         = render :partial => "transactions/status/status", :locals => { :__transaction_model => @transaction, role: role, is_author: is_author }
+      .content-card-section-form
+        .form-group
+          = label_tag :field_type, "Select first delivery time option"
+          = select_tag :field_type, options_for_select(CustomField::VALID_TIME), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
+        .form-group
+          = label_tag :field_type, "Select second delivery time option"
+          = select_tag :field_type, options_for_select(CustomField::VALID_TIME), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
+        .form-group
+          = label_tag :field_type, "Select third delivery time option"
+          = select_tag :field_type, options_for_select(CustomField::VALID_TIME), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
