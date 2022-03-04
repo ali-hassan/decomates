@@ -15,10 +15,10 @@
       .content-card-section-form
         .form-group
           = label_tag :field_type, "Select first delivery time option"
-          = select_tag :field_type, options_for_select(CustomField::VALID_TIME), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
+          = select_tag :field_type, options_for_select(CustomField::VALID_TIME_1), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
         .form-group
           = label_tag :field_type, "Select second delivery time option"
-          = select_tag :field_type, options_for_select(CustomField::VALID_TIME), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
+          = select_tag :field_type, options_for_select(CustomField::VALID_TIME_2), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
         .form-group
           = label_tag :field_type, "Select third delivery time option"
-          = select_tag :field_type, options_for_select(CustomField::VALID_TIME), class: %i[form-control], data: {url: new_admin2_users_user_field_path}
+          = select_tag :field_type, options_for_select(CustomField::VALID_TIME_3), class: %i[form-control], data: {url: new_admin2_users_user_field_path}

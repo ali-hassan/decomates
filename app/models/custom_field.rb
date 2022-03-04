@@ -59,7 +59,10 @@ class CustomField < ApplicationRecord
   enum assignment: ASSIGNMENTS
 
   VALID_TYPES = ["TextField", "NumericField", "DropdownField", "CheckboxField","DateField"]
-  VALID_TIME = ["7:00 AM - 8:00 AM","8:00 AM - 9:00 AM","9:00 AM - 10:00 AM","10:00 AM - 11:00 AM","11:00 AM - 12:00 PM","12:00 PM - 1:00 PM","1:00 PM - 2:00 PM","2:00 PM - 3:00 PM","3:00 PM - 4:00 PM","4:00 PM - 5:00 PM","5:00 PM - 6:00 PM","6:00 PM - 7:00 PM","7:00 PM - 8:00 PM","8:00 PM - 9:00 PM","9:00 PM - 10:00 PM"]
+  VALID_TIME_1 = ["#{Date.tomorrow} 7:00 AM - 9:00 AM","#{Date.tomorrow} 8:00 AM - 10:00 AM","#{Date.tomorrow}  10:00 AM - 12:00 PM","#{Date.tomorrow}  12:00 PM - 1:00 PM","#{Date.tomorrow} 1:00 PM - 3:00 PM","#{Date.tomorrow} 3:00 PM - 5:00 PM","#{Date.tomorrow} 5:00 PM - 7:00 PM","#{Date.tomorrow} 7:00 PM - 11:00 PM","#{Date.tomorrow} 11:00 PM - 12:00 AM"]
+  VALID_TIME_2 = ["#{Date.tomorrow + 1.day} 7:00 AM - 9:00 AM","#{Date.tomorrow + 1.day} 8:00 AM - 10:00 AM","#{Date.tomorrow + 1.day} 10:00 AM - 12:00 PM","#{Date.tomorrow + 1.day} 12:00 PM - 1:00 PM","#{Date.tomorrow + 1.day} 1:00 PM - 3:00 PM","#{Date.tomorrow + 1.day} 3:00 PM - 5:00 PM","#{Date.tomorrow + 1.day} 5:00 PM - 7:00 PM","#{Date.tomorrow + 1.day} 7:00 PM - 11:00 PM","#{Date.tomorrow + 1.day} 11:00 PM - 12:00 AM"]
+  VALID_TIME_3 = ["#{Date.tomorrow + 2.day} 7:00 AM - 9:00 AM","#{Date.tomorrow + 2.day} 8:00 AM - 10:00 AM","#{Date.tomorrow + 2.day} 10:00 AM - 12:00 PM","#{Date.tomorrow + 2.day} 12:00 PM - 1:00 PM","#{Date.tomorrow + 2.day} 1:00 PM - 3:00 PM","#{Date.tomorrow + 2.day} 3:00 PM - 5:00 PM","#{Date.tomorrow + 2.day} 5:00 PM - 7:00 PM","#{Date.tomorrow + 2.day} 7:00 PM - 11:00 PM","#{Date.tomorrow + 2.day} 11:00 PM - 12:00 AM"]
+
 
   validates_length_of :names, minimum: 1
   validates :category_custom_fields, length: { minimum: 1 }, if: proc { |field| field.for_listing? }
