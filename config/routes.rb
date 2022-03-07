@@ -172,6 +172,7 @@ Rails.application.routes.draw do
     end
 
     scope module: "admin2", path: "/admin", as: "admin2" do
+      resources :active_slots
       get '' => "dashboard#index"
       resource :plan, only: [:show]
       namespace :general do

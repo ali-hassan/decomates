@@ -53,6 +53,10 @@ class FactoryGirl::DefinitionProxy
 end
 
 FactoryGirl.define do
+  factory :available_slot do
+    day "2022-03-07 18:08:50"
+    name "MyString"
+  end
   sequence :id do |_|
     SecureRandom.urlsafe_base64
   end

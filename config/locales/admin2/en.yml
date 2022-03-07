@@ -81,6 +81,7 @@ en:
         listing_fields: "Listing fields"
         order_types: "Order types"
         categories: Categories
+        slots: Delivery Time Slots
       transactions_reviews:
         config_transactions: "Configure transactions"
         view_conversations: "View conversations"
@@ -545,6 +546,46 @@ en:
           one: "There is %{count} custom field in the category and subcategories. It will be moved to the selected category."
           other: "There are %{count} custom fields in the category and subcategories. They will be moved to the selected category."
         select_new_category: "Select a new category where the items listed above will be moved:"
+
+    slots:
+      info_text: "Here, you can edit the slots that seller will offer to buyers"
+      add_category: "+ Add a delivery time slot"
+      add_category_popup: "Add a time slot"
+      get_started: "Get started with time slots"
+      watch_video: "Watch a video"
+      take_tour: "Take a tour"
+      save_add_category_popup: "Add the time slot"
+      edit_category: "Edit the category \"%{time_slot}\""
+      category_name: "time slot name"
+      category_parent: "Parent time slot"
+      no_parent: "No parent"
+      order_types: "Order types"
+      add_more: "You can add more types in the \"Order types\" section."
+      delete_category_btn: "Delete the time slot"
+      delete_category: "Delete the category \"%{time_slot}\""
+      delete_category_info_text: "What should be the new time slot?"
+      remove_category_confirmation: "Are you sure you want to delete the time slot \"%{time_slot}\"?"
+      remove:
+        remove_category: "Delete the time slot"
+        remove_category_name: "Delete the time slot \"%{time_slot_name}\""
+        remove_empty_category: "Are you sure you want to delete this category? You can't undo this action."
+        warning_remove_effects: "Warning! Deleting the time slot \"%{time_slot}\" will have the following effects:"
+        warning_listing_will_be_moved:
+          one: "There is %{count} listing in the time slot. It will be moved to the selected time slot."
+          other: "There are %{count} listings in the time slot. They will be moved to the selected time slot."
+        warning_custom_field_will_be_moved:
+          one: "There is %{count} custom field in the time slot. It will be moved to the selected time slot."
+          other: "There are %{count} custom fields in the time slot. They will be moved to the selected time slot."
+        warning_subcategory_will_be_removed:
+          one: "There is %{count} subcategory in the time slot. It will be deleted."
+          other: "There are %{count} subcategories in the time slot. They will be deleted."
+        warning_with_subcategories_listing_will_be_moved:
+          one: "There is %{count} listing in the time slot and subcategories. It will be moved to the selected time slot."
+          other: "There are %{count} listings in the time slot and subcategories. They will be moved to the selected time slot."
+        warning_with_subcategories_custom_field_will_be_moved:
+          one: "There is %{count} custom field in the time slot and subcategories. It will be moved to the selected time slot."
+          other: "There are %{count} custom fields in the time slot and subcategories. They will be moved to the selected time slot."
+        select_new_category: "Select a new time slot where the items listed above will be moved:"
     manage_reviews:
       transaction: Transaction
       paginate: "Transaction with review"
