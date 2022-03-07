@@ -32,6 +32,8 @@
           = link_to t('admin2.sidebar.general.static_content'), admin2_general_static_content_index_path
         %li#adminnotifications-mobile{class: active_li('admin_notifications')}
           = link_to t('admin2.sidebar.general.admin_notifications'), admin2_general_admin_notifications_path
+        %li#adminnotifications-mobile{class: active_li('admin_notifications')}
+          = link_to "Delivery Time Slots", admin2_active_slots_path
 
       / Design
       %ul.category-title
