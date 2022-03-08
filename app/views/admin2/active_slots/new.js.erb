@@ -1,8 +1,9 @@
-var popup = $('#categoriesAddModal');
+var popup = $('#slotAddModal');
 if (popup.length) {
     popup.remove();
 }
 
-$('body').append('<%= j render 'admin2/listings/categories/add_popup', category: @category, shapes: @shapes, selected_shape_ids: @selected_shape_ids %>');
-$('#categoriesAddModal').modal('show');
+$('body').append('<%= j render 'admin2/active_slots/add_popup', category: @category, shapes: @shapes, selected_shape_ids: @selected_shape_ids %>');
+jQuery.noConflict();
+window.$('#slotAddModal').modal('show');
 
