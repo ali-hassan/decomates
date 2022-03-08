@@ -11,4 +11,9 @@
 #
 
 class AvailableSlot < ApplicationRecord
+
+
+  def new_record?
+    id.nil?
+  end
 end
