@@ -4,6 +4,31 @@
 
   #reply_form.message-avatar-padding.message-reply-form
     = form_for message_form, :url => message_form_action do |f|
+      -# = f.label :field_type, "Pick up address:"
+      -# = f.text_area :receiver_address, :class => "reply_form_text_area"
+      %br
+      %h3 Which pick up date/time works best for you?
+      .form-group
+        = label_tag :field_type, "Building information:"
+        = f.select :building_info, options_for_select(CustomField::BUILDING_TYPES), class: %i[form-control]
+
+      %br
+      = f.label :receiver_phone, "Contact information"
+      = f.text_field :receiver_phone, :class => "reply_form_text_area"
+      %br
+
+      %h3 Which pick up date/time works best for you?
+      .content-card-section-form
+        .form-group
+          = label_tag :field_type, "Select first delivery time option"
+          = select_tag :first_time_slot, options_for_select(CustomField::SLOTS), class: %i[form-control]
+        .form-group
+          = label_tag :field_type, "Select second delivery time option"
+          = select_tag :second_time_slot, options_for_select(CustomField::SLOTS), class: %i[form-control]
+        .form-group
+          = label_tag :field_type, "Select third delivery time option"
+          = select_tag :third_time_slot, options_for_select(CustomField::SLOTS), class: %i[form-control]
+      %br
       = f.label :content, t("conversations.show.write_a_reply")
       = f.text_area :content, :class => "reply_form_text_area"
       = f.hidden_field :conversation_id

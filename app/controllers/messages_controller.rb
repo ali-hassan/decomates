@@ -14,13 +14,29 @@ class MessagesController < ApplicationController
 
     message_params = params.require(:message).permit(
       :conversation_id,
-      :content
+      :content,
+      :first_time_slot,
+      :second_time_slot,
+      :third_time_slot,
+      :building_info,
+      :receiver_phone
     ).merge(
       sender_id: @current_user.id
     )
-
     @message = Message.new(message_params)
     if @message.save
+      tx = @message.conversation.tx
+      if tx.present?
+        if params[:message][:first_time_slot].present?
+          tx.update(first_time_slot: params[:message][:first_time_slot],first_time_slot: params[:message][:first_time_slot],second_time_slot: params[:message][:second_time_slot],third_time_slot: params[:message][:third_time_slot])
+        end
+        if params[:message][:building_info]
+          tx.update(building_info: params[:message][:building_info])
+        end
+        if params[:message][:receiver_phone]
+          tx.update(receiver_phone: params[:message][:receiver_phone])
+        end
+      end
       Delayed::Job.enqueue(MessageSentJob.new(@message.id, @current_community.id))
     else
       flash[:error] = "reply_cannot_be_empty"

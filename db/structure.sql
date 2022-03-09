@@ -1090,6 +1090,12 @@ CREATE TABLE `messages` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `conversation_id` int DEFAULT NULL,
+  `first_time_slot` datetime DEFAULT NULL,
+  `second_time_slot` datetime DEFAULT NULL,
+  `third_time_slot` datetime DEFAULT NULL,
+  `receiver_phone` varchar(255) DEFAULT NULL,
+  `receiver_address` text,
+  `building_info` text,
   PRIMARY KEY (`id`),
   KEY `index_messages_on_conversation_id` (`conversation_id`) USING BTREE,
   KEY `index_messages_on_sender_id` (`sender_id`)
@@ -1573,6 +1579,13 @@ CREATE TABLE `transactions` (
   `commission_from_buyer` int DEFAULT NULL,
   `minimum_buyer_fee_cents` int DEFAULT '0',
   `minimum_buyer_fee_currency` varchar(3) DEFAULT NULL,
+  `first_time_slot` datetime DEFAULT NULL,
+  `second_time_slot` datetime DEFAULT NULL,
+  `third_time_slot` datetime DEFAULT NULL,
+  `delivery_time_slot` datetime DEFAULT NULL,
+  `receiver_phone` varchar(255) DEFAULT NULL,
+  `receiver_address` text,
+  `building_info` text,
   PRIMARY KEY (`id`),
   KEY `index_transactions_on_listing_id` (`listing_id`) USING BTREE,
   KEY `index_transactions_on_conversation_id` (`conversation_id`) USING BTREE,
@@ -2503,6 +2516,8 @@ INSERT INTO `schema_migrations` (version) VALUES
 ('20210129114823'),
 ('20210517131520'),
 ('20211124070123'),
-('20220307130850');
+('20220307130850'),
+('20220309150919'),
+('20220309151258');
 
 
