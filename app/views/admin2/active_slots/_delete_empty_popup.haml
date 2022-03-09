@@ -6,8 +6,8 @@
         %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: :button}
           %span{'aria-hidden' => 'true'} ×
       .modal-body
-        %p= t('admin2.categories.remove.remove_empty_category')
+        %p= t('admin2.slots.remove.remove_empty_category')
         %p
       .modal-footer
         = link_to t('admin2.cancel'), '#', class: %i[cancel-modal], 'data-dismiss': :modal
-        = button_tag t('admin2.categories.delete_category_btn'), class: %i[btn btn-negative]
+        = button_tag t('admin2.slots.delete_category_btn'), class: %i[btn btn-negative]

@@ -8,10 +8,10 @@
       = category.active
     .actions
       %span.handle-move{'aria-hidden' => true, data: {intercom_target: 'Reorder category'}}
-      - if category
+      - if category.nil?
       - else
-        = link_to '#', class: 'remove-category', data: { intercom_target: 'Delete category', url: admin2_listings_category_path(category), caption: t('admin2.categories.delete_category', category: category.display_name(I18n.locale)) } do
+        = link_to '#', class: 'remove-category', data: { intercom_target: 'Delete category', url: admin2_active_slot_path(category), caption: t('admin2.categories.delete_category', category: category.name) } do
           %span.remove
 
-      = link_to edit_admin2_listings_category_path(category), remote: true do
+      = link_to edit_admin2_active_slot_path(category), remote: true do
         %span.edit{data: {intercom_target: 'Edit category'}}
