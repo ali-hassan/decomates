@@ -8,15 +8,15 @@
 .content-card-section-container
   %section.content-card-section
     %h2= t('admin2.sidebar.listings.slots')
-    = render 'admin2/listings/categories/links'
+    = render 'admin2/active_slots/links.haml'
 
-    %p.ingress= t('admin2.categories.info_text')
+    %p.ingress= t('admin2.slots.info_text')
     .form-group
       #nestedList.list-group.nested-sortable{data: {url: order_admin2_listings_categories_path, change_url: change_category_admin2_listings_categories_path}}
         = render partial: 'category', collection: @slots
 
     %p.ingress
-      = link_to t('admin2.categories.add_category'), new_admin2_active_slot_path, remote: true, data: {intercom_target: 'Add a Slot'}
+      = link_to t('admin2.slots.add_category'), new_admin2_active_slot_path, remote: true, data: {intercom_target: 'Add a slot'}
 
 - content_for :popup_layout do
   = render 'admin2/listings/categories/delete_empty_popup'

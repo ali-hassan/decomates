@@ -46,7 +46,8 @@ coverage/
 .vagrant
 .env
 .session.vim
-
+package-lock.json
+yarn.lock
 # React on Rails
 npm-debug.log*
 node_modules

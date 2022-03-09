@@ -1,10 +1,10 @@
 %ul.page-resources
   %li
-    = link_to t('admin2.categories.get_started'), 'https://help.sharetribe.com/en/articles/1443838?utm_source=marketplaceadminpanel&utm_medium=referral&utm_campaign=ingresshelp', target: :_blank, class: %i[external-link link-help-center]
+    = link_to t('admin2.slots.get_started'), 'https://help.sharetribe.com/en/articles/1443838?utm_source=marketplaceadminpanel&utm_medium=referral&utm_campaign=ingresshelp', target: :_blank, class: %i[external-link link-help-center]
   %li
-    = link_to t('admin2.categories.watch_video'), 'https://www.youtube.com/watch?v=QLN6Q6dGUnQ', class: %i[link-video], 'data-target': '#video', 'data-toggle': :modal
+    = link_to t('admin2.slots.watch_video'), 'https://www.youtube.com/watch?v=QLN6Q6dGUnQ', class: %i[link-video], 'data-target': '#video', 'data-toggle': :modal
   %li
-    = link_to t('admin2.categories.take_tour'), "#", onclick: "Intercom('startTour', 215432); return false;", class: %i[link-tour]
+    = link_to t('admin2.slots.take_tour'), "#", onclick: "Intercom('startTour', 215432); return false;", class: %i[link-tour]
 
 - content_for :popup_layout do
   #video.modal{"aria-hidden" => true, 'aria-labelledby' => 'categoriesAddModalLabel', 'data-backdrop' => 'static', role: :dialog, tabindex: '-1'}
