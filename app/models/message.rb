@@ -2,12 +2,18 @@
 #
 # Table name: messages
 #
-#  id              :integer          not null, primary key
-#  sender_id       :string(255)
-#  content         :text(65535)
-#  created_at      :datetime
-#  updated_at      :datetime
-#  conversation_id :integer
+#  id               :integer          not null, primary key
+#  sender_id        :string(255)
+#  content          :text(65535)
+#  created_at       :datetime
+#  updated_at       :datetime
+#  conversation_id  :integer
+#  first_time_slot  :datetime
+#  second_time_slot :datetime
+#  third_time_slot  :datetime
+#  receiver_phone   :string(255)
+#  receiver_address :text(65535)
+#  building_info    :text(65535)
 #
 # Indexes
 #

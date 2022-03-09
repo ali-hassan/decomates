@@ -39,6 +39,13 @@
 #  commission_from_buyer             :integer
 #  minimum_buyer_fee_cents           :integer          default(0)
 #  minimum_buyer_fee_currency        :string(3)
+#  first_time_slot                   :datetime
+#  second_time_slot                  :datetime
+#  third_time_slot                   :datetime
+#  delivery_time_slot                :datetime
+#  receiver_phone                    :string(255)
+#  receiver_address                  :text(65535)
+#  building_info                     :text(65535)
 #
 # Indexes
 #

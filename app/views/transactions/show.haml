@@ -4,3 +4,8 @@
   = render :partial => "transactions/details", locals: {role: role, is_author: is_author, price_break_down_locals: price_break_down_locals}
 
   = render :partial => "conversations/messages_and_form", locals: {role: role, message_form: message_form, message_form_action: message_form_action, messages: messages}
+
+  %div{:id => "transaction_status"}
+    = render :partial => "transactions/status/status", :locals => { :__transaction_model => @transaction, role: role, is_author: is_author }
+  %br
+  %br
