@@ -21,13 +21,13 @@
       .content-card-section-form
         .form-group
           = label_tag :field_type, "Select first delivery time option"
-          = select_tag :first_time_slot, options_for_select(CustomField::SLOTS), class: %i[form-control]
+          = select_tag :first_time_slot, options_for_select(CustomField::ACTIVE_SLOTS), class: %i[form-control]
         .form-group
           = label_tag :field_type, "Select second delivery time option"
-          = select_tag :second_time_slot, options_for_select(CustomField::SLOTS), class: %i[form-control]
+          = select_tag :second_time_slot, options_for_select(CustomField::ACTIVE_SLOTS), class: %i[form-control]
         .form-group
           = label_tag :field_type, "Select third delivery time option"
-          = select_tag :third_time_slot, options_for_select(CustomField::SLOTS), class: %i[form-control]
+          = select_tag :third_time_slot, options_for_select(CustomField::ACTIVE_SLOTS), class: %i[form-control]
       %br
       = f.label :content, t("conversations.show.write_a_reply")
       = f.text_area :content, :class => "reply_form_text_area"
