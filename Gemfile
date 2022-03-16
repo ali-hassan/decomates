@@ -191,7 +191,7 @@ gem "fast-polylines"
 gem "codemirror-rails"
 gem 'rb-inotify', '~> 0.10'
 gem "geocoder"
-gem 'active_reporting'
+# gem 'active_reporting'
 group :deployment do
   gem "capistrano", "=3.11"
   gem 'capistrano3-delayed-job', '~> 1.0'
