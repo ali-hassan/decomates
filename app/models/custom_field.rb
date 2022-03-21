@@ -64,6 +64,7 @@ class CustomField < ApplicationRecord
   VALID_TIME_3 = ["#{Date.tomorrow + 2.day} 7:00 AM - 9:00 AM","#{Date.tomorrow + 2.day} 8:00 AM - 10:00 AM","#{Date.tomorrow + 2.day} 10:00 AM - 12:00 PM","#{Date.tomorrow + 2.day} 12:00 PM - 1:00 PM","#{Date.tomorrow + 2.day} 1:00 PM - 3:00 PM","#{Date.tomorrow + 2.day} 3:00 PM - 5:00 PM","#{Date.tomorrow + 2.day} 5:00 PM - 7:00 PM","#{Date.tomorrow + 2.day} 7:00 PM - 11:00 PM","#{Date.tomorrow + 2.day} 11:00 PM - 12:00 AM"]
   ACTIVE_SLOTS = AvailableSlot.where(active: true).collect(&:day)
   BUILDING_TYPES = ["Elevator", "Walk up", "Freestanding House"]
+  BUILDINGS_1 = ["Elevator", "Walk up", "Freestanding House"]
 
   validates_length_of :names, minimum: 1
   validates :category_custom_fields, length: { minimum: 1 }, if: proc { |field| field.for_listing? }
