@@ -65,6 +65,7 @@ class CustomField < ApplicationRecord
   ACTIVE_SLOTS = AvailableSlot.where(active: true).collect(&:day)
   BUILDING_TYPES = ["Elevator", "Walk up", "Freestanding House"]
   BUILDINGS_1 = ["Elevator", "Walk up", "Freestanding House"]
+  BUILDINGS_2 = ["Elevator", "Walk up", "Freestanding House"]
 
   validates_length_of :names, minimum: 1
   validates :category_custom_fields, length: { minimum: 1 }, if: proc { |field| field.for_listing? }
