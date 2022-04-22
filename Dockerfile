@@ -4,7 +4,8 @@ MAINTAINER Sharetribe Team <team@sharetribe.com>
 
 ENV REFRESHED_AT 2021-09-10
 
-RUN apt-get update && apt-get dist-upgrade -y
+RUN apt-get updat
+e && apt-get dist-upgrade -y
 
 # Prevent GPG from trying to bind on IPv6 address even if there are none
 RUN mkdir ~/.gnupg \
@@ -97,7 +98,7 @@ COPY . /opt/app
 EXPOSE 3000
 
 CMD ["script/startup.sh"]
-ENTRYPOINT ["script/entrypoint.sh"]
+#ENTRYPOINT ["script/entrypoint.sh"]
 
 #
 # Assets
