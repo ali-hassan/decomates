@@ -23,10 +23,10 @@ AllCops:
   TargetRubyVersion: 2.7.5
 
 Style/RegexpLiteral:
-  Enabled: false
+  Enabled: true
 
 # This is enabled by default for Ruby 2.3. It's a good thing to do and
 # should be enabled later but requires going through quite a bit of
 # code.
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
