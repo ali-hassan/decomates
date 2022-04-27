@@ -2,13 +2,13 @@
 
 [![CircleCI](https://circleci.com/gh/sharetribe/sharetribe/tree/master.svg?style=svg)](https://circleci.com/gh/sharetribe/sharetribe/tree/master) [![Code Climate](https://codeclimate.com/github/sharetribe/sharetribe.png)](https://codeclimate.com/github/sharetribe/sharetribe)
 
-Sharetribe develops advanced marketplace software for every business life cycle stage.
+Decomates develops advanced marketplace software for every business life cycle stage.
 
-Sharetribe Go gives you the complete feature set to launch a marketplace for rentals, services, events, or products. The platform is source-available under the Sharetribe Community Public License.
+Decomates Go gives you the complete feature set to launch a marketplace for rentals, services, events, or products. The platform is source-available under the Decomates Community Public License.
 
 To launch your marketplace in minutes without touching code or worrying about hosting and backups, [head to the SaaS version of Sharetribe Go](https://www.sharetribe.com/products/go).
 
-If you're looking for a customizable and extendable marketplace solution, [check out Sharetribe Flex](https://www.sharetribe.com/products/flex). Flex is an API-based marketplace solution designed with a developers-first mindset. It allows you to develop your marketplace with the programming language of your choice, build a mobile app, design a customized transaction flow, and easily integrate third party services.
+If you're looking for a customizable and extendable marketplace solution, [check out Decomates Flex](https://www.sharetribe.com/products/flex). Flex is an API-based marketplace solution designed with a developers-first mindset. It allows you to develop your marketplace with the programming language of your choice, build a mobile app, design a customized transaction flow, and easily integrate third party services.
 
 
 ### Contents
